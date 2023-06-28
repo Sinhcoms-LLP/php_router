@@ -14,6 +14,6 @@ switch ($request) {
         break;
     default:
         http_response_code(404);
-        require __DIR__ . '/404.php';
+        require __DIR__ . '/error.php';
         break;
 }
