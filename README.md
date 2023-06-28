@@ -2,14 +2,14 @@
 Redirect all requests to index.php
 
 In the root of your project, create a .htaccess file that will redirect all requests to index.php.
-
+<pre>
 .htaccess
 RewriteEngine On
 RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.+)$ index.php [QSA,L]
-
+</pre>
 Create a routing switch
 Get the requested path with $_SERVER['REQUEST_URI'], and require the page you want to display. I have '' and '/' for both url.com/ and url.com.
 
